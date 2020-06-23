@@ -1,0 +1,11 @@
+server:
+  servlet:
+    context-path: /company
+  port: 6080
+spring:
+  application:
+    name: company-server
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:6060/eureka/eureka

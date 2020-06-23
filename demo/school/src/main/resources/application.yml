@@ -1,0 +1,11 @@
+server:
+  port: 6070
+  servlet:
+    context-path: /school
+spring:
+  application:
+    name: school-server
+eureka:
+  client:
+    service-url:
+      defaultZone:  http://localhost:6060/eureka/eureka
