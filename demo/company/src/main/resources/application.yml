@@ -3,6 +3,14 @@ server:
     context-path: /company
   port: 6080
 spring:
+  redis:
+    cluster:
+      #设置key的生存时间，当key过期时，它会被自动删除；
+      expire-seconds: 120
+      #设置命令的执行时间，如果超过这个时间，则报错;
+      command-timeout: 5000
+      #设置redis集群的节点信息，其中namenode为域名解析，通过解析域名来获取相应的地址;
+      nodes: 192.168.86.202:7001,192.168.86.202:7002,192.168.86.202:7003,192.168.86.202:7004,192.168.86.202:7005,192.168.86.202:7006
   application:
     name: company-server
 eureka:
