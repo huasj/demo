@@ -1,18 +1,27 @@
 package com.huasj.forward.demo.school.controller;
 
 import com.huasj.forward.demo.entity.Student;
+import com.huasj.forward.demo.school.service.SchoolService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
+import java.util.List;
+
 @RestController
 public class SchoolController {
 
-    @RequestMapping(value = "/studentList",method = RequestMethod.GET)
-    public String getStudent(){
-        Student student = new Student();
-        student.setName("xiaoming");
-        student.setAge(18);
-        return student.toString();
+    @Resource
+    SchoolService schoolService;
+
+    @RequestMapping(value = "/getStudent",method = RequestMethod.GET)
+    public List<Student> getStudent(){
+        return schoolService.getStudent();
+    }
+
+    @RequestMapping(value = "/getStudentNumber",method = RequestMethod.GET)
+    public Integer getStudentNumber(){
+        return schoolService.getStudentNumber();
     }
 }

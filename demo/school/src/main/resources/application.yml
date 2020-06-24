@@ -5,6 +5,28 @@ server:
 spring:
   application:
     name: school-server
+  datasource:
+    url: jdbc:mysql://192.168.86.201:3306/huasj?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: Cdb@123...
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    logSlowSql: true
+    thymeleaf:
+      prefix: classpath:/templates/
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath*:mybatis/mappers/*.xml
 eureka:
   client:
     service-url:

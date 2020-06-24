@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.huasj.forward.demo.school.dao.SchoolMapper" >
+    <select id="getStudent" resultType="com.huasj.forward.demo.entity.Student">
+        SELECT id, name FROM student
+    </select>
+
+    <select id="getStudentNumber" resultType="Integer">
+        SELECT count(id) FROM student
+    </select>
+</mapper>
