@@ -86,6 +86,7 @@
             <artifactId>poi-ooxml-schemas</artifactId>
             <version>3.16</version>
         </dependency>
+        <!-- 添加 google 提供的二维码依赖 -->
         <dependency>
             <groupId>com.google.zxing</groupId>
             <artifactId>core</artifactId>
@@ -96,6 +97,7 @@
             <artifactId>javase</artifactId>
             <version>3.2.1</version>
         </dependency>
+        <!-- 添加 google 提供的二维码依赖 -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
