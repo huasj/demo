@@ -48,3 +48,6 @@ var wait = function (dfd) {
 $.Deferred(wait).done(function () {
     alert('done')
 });
+
+
+test
